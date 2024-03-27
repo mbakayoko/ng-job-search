@@ -1,0 +1,13 @@
+
+
+.flex-container > div {
+  margin: 10px;
+  line-height: 4rem;
+}
+a{
+  color: aliceblue;
+  font-size: x-large;
+}
+p{
+  margin: 0;
+}

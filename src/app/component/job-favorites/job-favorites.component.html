@@ -1,0 +1,6 @@
+<ng-container *ngIf="jobs?.length; else msgBbloc">
+  <app-job-list [jobs]="jobs" [selection]="false"></app-job-list>
+</ng-container>
+<ng-template #msgBbloc>
+ <p>No favorite seleted</p>
+</ng-template>

@@ -1,0 +1,40 @@
+.content {
+  max-width: 50rem;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 1px;
+  color: #fff;
+}
+
+li a {
+  padding: 0.75rem 10.4rem;
+  font: 1em "Trebuchet MS", Arial, sans-serif;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4d4949;
+  color: aliceblue;
+}
+
+li a:hover{
+  background: #c7c4c4;
+  color: #4d4949;
+}
+
+.active-link {
+  background: #c7c4c4 !important;
+  color: #4d4949 !important;
+}

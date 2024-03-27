@@ -1,0 +1,9 @@
+<div class="content">
+    <h1>{{ title }}</h1>
+    <ul>
+      <li><a [routerLink]="['/jobs']" routerLinkActive="active-link">JOBS</a></li>
+      <li><a [routerLink]="['/favorites']" routerLinkActive="active-link">FAVORITES</a></li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>
+

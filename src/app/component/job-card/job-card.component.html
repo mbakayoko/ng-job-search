@@ -1,0 +1,21 @@
+<div class="flex-container">
+  <div>
+    <span>
+      <img class="logo" [src]="job.companyLogo" alt="Logo" />
+    </span>
+  </div>
+  <div style="flex-grow: 8">
+    <P>
+      <a [routerLink]="['/jobs', job.id]">{{ job.title }}</a>
+    </P>
+    <p>{{ job.companyName }} - {{ job.reference }}</p>
+  </div>
+  <div style="text-align: end">
+    <span
+      [id]="'star-' + job.id"
+      class="icon-star"
+      [ngClass]="{ active: job.active && selection}"
+      (click)="onClickStar(job)"
+    ></span>
+  </div>
+</div>

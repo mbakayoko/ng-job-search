@@ -1,0 +1,3 @@
+<ng-container *ngFor="let job of jobs">
+  <app-job-card [job]="job" [selection]="selection" (activate)="onActive(job)"></app-job-card>
+</ng-container>

@@ -1,0 +1,36 @@
+<ul class="back">
+  <li>
+    <a routerLink="/jobs"><i class="fa fa-home">Back</i></a>
+  </li>
+</ul>
+<ng-container *ngIf="job$ | async as job">
+  <div class="flex-container">
+    <div>
+      <span>
+        <img class="logo" [src]="job.companyLogo" alt="Logo" />
+      </span>
+    </div>
+    <div>
+      <h3>
+        {{ job.title }}
+      </h3>
+      <ng-container *ngFor="let type of job.types">
+        <button>{{ type }}</button>
+      </ng-container>
+      <ng-container *ngFor="let industry of job.industries">
+        <button [innerHTML]="industry"></button>
+      </ng-container>
+      <!-- <p>{{ job.companyName }} - {{ job.reference }}</p> -->
+    </div>
+  </div>
+  <div>
+    <p>
+      <span class="info-label">Publish date:</span>
+      {{ job.publishDate | date : "M/dd/yy" }}
+    </p>
+    <p><span class="info-label">Location:</span> {{ job.location }}</p>
+    <p><span class="info-label">Reference:</span> {{ job.reference }}</p>
+    <p><span class="info-label">Description:</span></p>
+    <p [innerHTML]="job.description"></p>
+  </div>
+</ng-container>
